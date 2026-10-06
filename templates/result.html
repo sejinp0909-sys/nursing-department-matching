@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>매칭 결과</title>s
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fb;
+            margin: 0;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .result-box {
+            max-width: 700px;
+            margin: auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .main-result {
+            font-size: 40px;
+            color: #4f6df5;
+            margin: 25px 0;
+        }
+
+        .second-result {
+            font-size: 22px;
+            margin-bottom: 40px;
+        }
+
+        .scores {
+            text-align: left;
+            margin-top: 30px;
+        }
+
+        .score {
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+        }
+
+        .home-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 30px;
+            background-color: #4f6df5;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<div class="result-box">
+
+    <h1>🎉 매칭 결과</h1>
+
+    <p>당신에게 가장 적합한 부서는</p>
+
+    <div class="main-result">
+        {{ first_department }}
+    </div>
+
+    <p>
+        2순위 추천 부서:
+        <strong>{{ second_department }}</strong>
+    </p>
+
+
+    <div class="scores">
+
+        <h2>부서별 점수</h2>
+
+        <div class="score">
+            병동 :
+            <strong>{{ scores["병동"] }}점</strong>
+        </div>
+
+        <div class="score">
+            응급실 :
+            <strong>{{ scores["응급실"] }}점</strong>
+        </div>
+
+        <div class="score">
+            중환자실 :
+            <strong>{{ scores["중환자실"] }}점</strong>
+        </div>
+
+        <div class="score">
+            수술실 :
+            <strong>{{ scores["수술실"] }}점</strong>
+        </div>
+
+    </div>
+
+
+    <a href="/" class="home-button">
+        처음으로 돌아가기
+    </a>
+
+</div>
+
+</body>
+
+</html>
