@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>질문 답변 챗봇</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="chat-container">
+
+        <header class="chat-header">
+            <h2>질문 답변 챗봇</h2>
+            <p>궁금한 내용을 자유롭게 질문해 보세요.</p>
+        </header>
+
+        <main id="chat-box" class="chat-box">
+
+            <div class="message bot">
+                <div class="bubble">
+                    안녕하세요! 무엇이 궁금하신가요?
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="chat-input-area">
+
+            <input
+                type="text"
+                id="user-input"
+                placeholder="메시지를 입력하세요..."
+                autocomplete="off"
+            >
+
+            <button id="send-button" onclick="sendMessage()">
+                전송
+            </button>
+
+        </footer>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
